@@ -1,0 +1,88 @@
+Working with files and directories is a fundamental skill in any command-line environment. It helps you efficiently navigate projects, manage source code, and maintain systems across different platforms.
+
+Create, list, move, and remove files or directories using standard commands.
+Use Unix-like tools available in Linux, macOS, and Git Bash on Windows.
+Manage project files effectively while working with Git and repositories.
+Changing Directories
+Navigating between directories allows you to move through the file system hierarchy. This is done using the cd (change directory) command.
+
+Move into a Directory
+This command changes the current working directory to /home/user/Documents.
+
+cd /home/user/Documents
+Move to the Parent Directory
+This moves you one level up to the parent directory.
+
+cd ..
+Creating Files and Directories
+Creating files and folders helps organize your work efficiently.
+
+Creating Files
+The touch command is used to create an empty file.
+
+touch myfile.txt
+This creates a file named myfile.txt in the current directory.
+
+Creating Directories
+Directories are created using the mkdir (make directory) command.
+
+mkdir my_directory
+This creates a new directory called my_directory.
+
+Listing Directory Contents
+To see files and directories inside a folder, use the ls command.
+
+Basic Listing
+Lists files and directories in the current directory.
+
+ls
+Detailed Listing
+Displays file permissions, ownership, size, and modification date.
+
+ls -l
+Show Hidden Files
+Shows hidden files (files starting with .).
+
+ls -a
+Combined Options
+Displays detailed information for all files, including hidden ones.
+
+ls -la
+Listing Files Tracked by Git
+Before modifying or removing files in a Git repository, it’s useful to know what Git is tracking.
+
+git ls-files
+This command lists all files currently tracked by Git in the repository.
+
+Removing Files and Directories in Git
+Git provides commands to safely remove files and directories while keeping version history consistent.
+
+Removing a File
+git rm filename
+This removes the file from the working directory and stages the removal for the next commit.
+
+Removing a Directory
+git rm -r directoryname
+The -r (recursive) option removes the directory along with all its contents.
+
+Remove from Git but Keep Locally
+git rm --cached filename
+This removes the file from Git tracking but keeps it in your local file system.
+
+Copying Directories Using Git Bash
+Git Bash includes standard Unix utilities like cp and mv, making it useful beyond Git operations.
+
+Copy a Directory
+cp -r /path/to/source_directory /path/to/destination_directory
+cp copies files or directories
+-r enables recursive copying
+The destination’s parent directory must already exist
+If the destination directory exists, the source directory is copied inside it as a subdirectory.
+
+Moving Directories Using Git Bash
+Directories can be moved or renamed using the mv command.
+
+mv /path/to/source_directory /path/to/destination_directory
+The source directory is removed from its original location
+If the destination exists, the directory is moved inside it
+To overwrite an existing directory, it must be deleted first
