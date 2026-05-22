@@ -1,0 +1,42 @@
+Tracking file changes using Git enables effective version control by recording updates and maintaining a clear history of file modifications.
+
+Keeps a complete version history of files.
+Helps review and manage changes over time.
+Viewing Commit History of a File in Git
+It helps identify when and how a file was modified across different commits.
+
+Step 1: Check the Current Status of Repository
+It's a good practice to check the current status of the Git repository before starting to view the change history of a file.
+
+git status
+This will display the current state of the repository, including any untracked, modified, or staged files.
+
+Step 2: View the Change History of a File
+To view the change history of a particular file, use the git log command.
+
+git log -- filename.extension
+Screenshot_2024-05-23-11-08-47_1920x1080-1
+output
+Git will only show list of commits that affected the specified file.
+
+Step 3: View the Changes Made in a Commit
+To view the changes that were made in a particular commit, we can use the git show command.
+
+git show <commit-hash>
+for me it will be like
+
+git show 4307109352a64dcd91ebe22bd8845fb6345ff5cf
+Screenshot_2024-05-23-11-15-44_1920x1080
+Output
+Alternative way
+git log -p -- filename
+This can also be used to view the change history of a specific file in Git.
+
+Command breakdown
+git log: This is the base command for viewing the commit history in Git.
+-p: This option tells Git to show the diff of each commit.
+--: This option separates the commit history options from the file path.
+filename: This is the path to the file whose change history you want to view.
+Screenshot_2024-05-23-11-21-48_1920x1080
+Output
+If you are facing any issue on this page. P
