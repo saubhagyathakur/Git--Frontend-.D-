@@ -1,0 +1,63 @@
+Adopting strong Git practices enables teams to collaborate efficiently, maintain code quality, and manage project changes with confidence.
+
+Define consistent workflows for branching and merging.
+Encourage regular reviews before integrating changes.
+Keep repositories organized and easy to maintain.
+Promote frequent synchronization with the shared codebase.
+Maintain clear version history for accountability and traceability.
+1. Commits Should Be Small and Frequent
+Frequent, small commits help maintain a clear project history, simplify code reviews, and make issues easier to track and fix.
+
+Commit one logical change at a time.
+Avoid large commits with extensive file or line changes.
+2. Commit Messages are to Be Semantic
+Clear commit messages explain the purpose of a change and make it easy to understand why code was added or modified.
+
+Avoid very short or vague messages (e.g., fewer than three words).
+Ensure messages provide enough detail to explain the change clearly.
+3. Use of Branches  
+Using a Git branch helps organize related commits, supports pull requests, and keeps the main branch stable and production-ready.
+
+Group connected changes within a Git branch for easier review.
+Merge only finalized branch work into the main branch.
+Regularly run git pull to keep your Git branch up to date and reduce conflicts.
+4. One Branch, One Feature  
+The feature branch strategy isolates new functionality in a dedicated branch, keeping the main branch stable and CI-ready.
+
+Create one Git branch per feature and integrate it using git merge.
+Keeps unfinished code out of the main branch.
+Simplifies code reviews by focusing on a single feature.
+Improves focus and readability through small, clear changes.
+5. Handle Merge Properly
+When multiple developers work on separate feature branches, conflicts can occur during a Git merge command if the same files are modified and require manual resolution.
+
+Conflicts arise when using Git commands like git merge on overlapping changes.
+Modern editors support Git commands with visual conflict resolution tools.
+Proper tooling makes resolving merge conflicts faster and more reliable.
+6. Single Repository  
+Choosing between a single repository and multiple repositories depends on team size, product structure, and code ownership requirements.
+
+Small teams benefit from a single repository to keep code in sync and simplify refactoring.
+Shared internal libraries can be distributed via package managers.
+Multiple repositories are useful for separating closed-source code or client-specific work.
+7. Avoid Committing Dependencies in Repo
+A Git repository should track source code only, not external dependencies, to keep the project clean, lightweight, and maintainable.
+
+Avoid committing dependencies as they increase repository size
+Use appropriate build or dependency management tools instead of Git
+Choose tools based on the tech stack (e.g., Maven for Java, npm for Node.js)
+Helps ensure consistent dependency versions across all development environments.
+8. Don't  Commit Broken Code
+Committing broken code can disrupt the entire team and block others from progressing, so code should always be tested before committing.
+
+Verify your changes locally before running git commit.
+Use git stash to temporarily save incomplete work when switching branches.
+Never commit code that breaks the build or functionality.
+9. Use Tags
+Git tags mark a specific snapshot of the codebase at release time, helping teams track versions and manage releases effectively.
+
+Tags capture a stable state of a branch without adding new commit history.
+Help track version numbers and compare changes between releases.
+Useful for documenting and maintaining clear release notes.
+Tags are immutable references to specific commits and do not behave like branches.
+If you are facing any issue on this page. Pleas
