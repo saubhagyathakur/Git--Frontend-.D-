@@ -1,0 +1,82 @@
+Git is a distributed version control system for tracking file changes, while GitHub is a cloud platform for hosting Git repositories and enabling collaboration. Installing Git is required to use both for version control.
+
+Installing Git on Windows
+We will install git on Windows through the official Git website, which is the easy and most recommended way. The following steps are for installing the git on Windows.
+
+Step 1: Download the Installer
+Go to the official Git website: https://git-scm.com/downloads/win
+
+gitwindows0
+The download will start automatically for the latest version of Git for Windows. After the download is complete, run the .exe file.
+
+Step 2: Select Editor & Adjust Path
+Follow the prompts in the setup wizard. Most default settings will be fine for general use, but here are some key steps:
+
+Firstly, the installer will ask which text editor to use for Git. You can choose from options like Vim, Notepad++, or Visual Studio Code.
+Make sure you choose the option that adds Git to your system PATH (recommended for ease of use in the command line).
+Select the default option (OpenSSL) to allow Git to communicate securely over HTTPS.
+The default choice, “Checkout Windows-style, commit Unix-style line endings,” is ideal for most developers working in Windows environments.
+Step 3: Complete the Installation
+After configuring the setup, click "Install" and allow the installation to complete.
+
+Once done, you can launch Git Bash (installed with Git) or use Git from the Command Prompt (cmd) by typing the following command.
+
+git --version
+Screenshot-2025-03-03-101941
+Git
+If Git is installed, it will display the version number.
+
+Installing Git on Linux
+Step 1: Update the System
+For Debian/Ubuntu:
+
+sudo apt update
+sudo apt install git
+For Fedora:
+
+sudo dnf install git
+For Arch Linux:
+
+sudo pacman -S git
+Step 2: Verify Installation
+Use the below command to varify the installation of Git in Ubuntu.
+
+git --version
+version
+Installing Git on Mac
+Step 1: Get Homebrew in your macOS
+If you don't have Homebrew, then type the following command in the terminal:
+
+/bin/bash -c "$(curl -fsSL
+ https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+git-11
+Step 2: Install Brew
+We recommend you install Homebrew first and then run the below command to download Git with no errors:
+
+brew install git
+git-22
+Step 3: Verify the Installation
+Once the installation is complete, verify the installation:
+
+git --version
+git-33
+Setting Up GitHub with Git
+Step 1: Create a GitHub Account
+Visit GitHub and sign up.
+Screenshot-2025-03-03-112007
+Github
+Step 2: Configure Git with GitHub
+Run the following commands in the terminal (Windows Git Bash, Linux, or Mac Terminal):
+
+git config --global user.name "YourName"
+git config --global user.email "youremail@example.com"
+Step 3: Generate SSH Key (Optional but Recommended)
+ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+Copy the key:
+cat ~/.ssh/id_rsa.pub
+Add it to GitHub > Settings > SSH and GPG keys.
+Step 4: Create a New Repository
+Screenshot-2025-03-03-112509
+New Repository
+Now we have successfully setup GitHub in our system.
+
