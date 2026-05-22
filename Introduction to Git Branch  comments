@@ -1,0 +1,52 @@
+1. git branch
+Lists all local branches or creates a new branch when used with a name means it displays a list of all local branches or creates a new branch if a name is specified.
+
+Screenshot-2025-03-03-120437
+git branch
+2. git branch <branch-name>
+Creates a new branch with the specified name without switching to it, allowing you to stay on your current branch.
+
+Screenshot-2025-03-03-120608
+git branch <branch-name>
+3. git checkout <branch-name>
+Switches to an existing branch in the repository, allowing you to continue working from where it was last updated.
+
+Screenshot-2025-03-03-120740
+git checkout <branch-name>
+4. git checkout -b <branch-name>
+Creates a new branch with the specified name and immediately switches to it, allowing you to start working on it right away.
+
+Screenshot-2025-03-03-121129
+git checkout -b <branch-name>
+5. git switch <branch-name>
+A modern alternative to the checkout command, primarily used for switching branches more efficiently and intuitively.
+
+Screenshot-2025-03-03-121353
+git switch <branch-name>
+6. git switch -c <branch-name>
+Creates a new branch with the specified name and switches to it immediately, allowing you to start making changes right away.
+
+Screenshot-2025-03-03-121553
+git switch -c <branch-name>
+7. git rebase <branch-name>
+git rebase main rewrites the feature branch commits so they appear as if they were created from the latest commit of main.
+
+Before rebase
+
+main:    A --- B --- C
+                  \
+feature:           D --- E
+After rebase
+
+main:    A --- B --- C
+                        \
+feature:                 D' --- E'
+Screenshot-2025-03-03-122106
+git rebase <branch-name>
+8. git branch -d <branch-name>
+Deletes the specified branch, but only if it has been fully merged into its upstream branch, ensuring no unmerged changes are lost.
+
+Screenshot-2025-03-03-122554
+git branch -d <branch-name>
+9. git branch -D <branch-name>
+Forcefully deletes the specified branch, even if it contains unmerged changes or has not been fully updated, potentially leading to data loss.
