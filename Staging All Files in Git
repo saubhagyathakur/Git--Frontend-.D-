@@ -1,0 +1,76 @@
+Adding all files in Git stages all changes in the working directory so they can be included in the next commit.
+
+Stages new, modified, and deleted files (using git add -A).
+Ensures all intended updates are included in the next commit.
+Git Staging Area
+The staging area is an intermediate step in Git that helps control what changes are included in a commit.
+
+Sits between the working directory and the repository.
+Allows reviewing and organizing changes before committing.
+[Approach 1]: Using the git add command with the dot(.) notation
+Step 1: Create a project or folder so all our files will be there. Put all your files there to add on git.
+
+For creating a folder use command- mkdir folder-name
+For creating a file use command- touch file-name
+Folder Structure: Create a folder similar to that.
+
+Screenshot-2024-04-19-150004
+
+Step 2: Initialize git to that project root or folder.
+
+git init 
+Screenshot-2024-04-19-150336
+
+Step 3: Add all files using dot(.) to git.
+
+git add .
+And make a commit immediately
+
+git commit -m "added all files"
+Screenshot-2024-04-19-150652
+
+Step 4: To see the log of your added file, just run this command
+
+git log
+And log look likes this:
+
+Screenshot-2024-04-19-150901
+
+[Approach 2]: Using the git add command with the --all or -A flag
+Step 1: Make some changes to all files so that turned into modified state, if a file modified then 'M' will be shown right side.
+
+Screenshot-2024-04-19-151258
+
+Step 2: To know the status of all files, just run this command.
+
+git status
+And you will see this.
+
+Screenshot-2024-04-19-151455
+
+Step 3: To add all files using --all or -A flag, run following command on terminal.
+
+git add --all  OR
+git add -A
+and then make a commit.
+
+git commit -m "added all modified files"
+Screenshot-2024-04-19-151832
+
+Now we can check git log.
+
+Screenshot-2024-04-19-152049
+
+[Approach 3]: Adding all files by extension
+In some cases, you may be interested in adding all files that have a specific extension : *.txt or *.js for example.
+
+To add files with a specific extension, use the git add command with a wildcard and the file extension.
+
+git add *.txt
+git add *.js
+Let's say, we have two js files, and we want to add both files to git, then follow these command.
+
+Screenshot-2024-04-19-153632
+
+In this way, We can easily add all files to git.
+
